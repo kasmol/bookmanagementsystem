@@ -28,16 +28,16 @@ export default function AddBook() {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit(savedata)} className='jumbotron mt-4'>
-        <label htmlFor='nm'><b>Book Name: </b></label>
-        <input id='nm' type='text' className='form-control' placeholder='eg. Atomic Habits' {...register('BookName')} /><br />
+        <label htmlFor='nm'><b>Account Name: </b></label>
+        <input id='nm' type='text' className='form-control' placeholder='eg. Moses Otieno' {...register('AccountName')} /><br />
         
-        <label htmlFor='anm'><b>Author Name: </b></label>
-        <input id='anm' type='text' className='form-control' placeholder='eg. James Clear' {...register('AuthorName')} /><br />
+        <label htmlFor='anm'><b>Account Number: </b></label>
+        <input id='anm' type='text' className='form-control' placeholder='eg. 12906745' {...register('AccountNumber')} /><br />
         
-        <label htmlFor='avb'><b>Availability: </b></label>
-        <select {...register('Availability')} id='avb' className='form-control'>
-          <option value="Available">Available</option>
-          <option value="Not Available">Not Available</option>
+        <label htmlFor='avb'><b>Status: </b></label>
+        <select {...register('Status')} id='avb' className='form-control'>
+          <option value="Active">Active</option>
+          <option value="Disabled">Disabled</option>
         </select>
         <br />
         
@@ -45,8 +45,8 @@ export default function AddBook() {
         <input type='reset' className='btn btn-warning' />
         
         {/* Display validation errors if any */}
-        {errors.BookName && <p>{errors.BookName.message}</p>}
-        {errors.AuthorName && <p>{errors.AuthorName.message}</p>}
+        {errors.AccountName && <p>{errors.AccountName.message}</p>}
+        {errors.AccountNumber && <p>{errors.AccountNumber.message}</p>}
       </form>
     </div>
   )

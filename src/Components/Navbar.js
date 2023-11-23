@@ -7,7 +7,7 @@ export default function NavBar() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="#">
-            Library Management System
+            Account  Management System
           </NavLink>
           <button
             className="navbar-toggler"
@@ -23,10 +23,10 @@ export default function NavBar() {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <NavLink className="nav-link active" aria-current="page" to="/add">
-                Add books
+                Add Account
               </NavLink>
               <NavLink className="nav-link" to="/show">
-                Show Books
+                Show Accounts
               </NavLink>
             </div>
           </div>

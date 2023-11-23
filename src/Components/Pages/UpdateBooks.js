@@ -11,8 +11,8 @@ export default function UpdateBook() {
 
   async function fetchBook() {
     const result = await axios.get(`https://localhost:7079/api/Books/${id}`)
-    setValue('BookName',result.data.BookName)
-    setValue('AuthorName',result.data.AuthorName)
+    setValue('AccountName',result.data.AccountName)
+    setValue('AccountNumber',result.data.AccountNumber)
     setValue('Avaibility', result.data.Avaibility)
   }
 
@@ -28,14 +28,14 @@ export default function UpdateBook() {
   return (
     <div className='container'>
       <form onSubmit={handleSubmit(savedata)} className='jumbotron mt-4'>
-        <label htmlFor='nm'><b>Book Name: </b></label>
-        <input id='nm' type='text' className='form-control' placeholder='eg. Authomic Habits' {...register('BookName')}/><br/>
-        <label htmlFor='anm'><b>Author Name: </b></label>
-        <input id='anm' type='text' className='form-control' placeholder='eg. James Clear' {...register('AuthorName')}/><br/>
-        <label htmlFor='avb'><b>Avaibility: </b></label>
-        <select {...register('Availability')} id='avb' className='form-control'>
-          <option value="Available">Available</option>
-          <option value="Not Available">Not Available</option>
+        <label htmlFor='nm'><b>Account Name: </b></label>
+        <input id='nm' type='text' className='form-control' placeholder='eg. KCB' {...register('AccountName')}/><br/>
+        <label htmlFor='anm'><b>Account Number: </b></label>
+        <input id='anm' type='text' className='form-control' placeholder='eg. 190099349' {...register('AccountNumber')}/><br/>
+        <label htmlFor='avb'><b>Status: </b></label>
+        <select {...register('Status')} id='avb' className='form-control'>
+          <option value="Active">Active</option>
+          <option value="Disabled">Disabled</option>
         </select>
         <br/>
         <input type='submit' className='btn btn-success' value="Update"/> &nbsp;
